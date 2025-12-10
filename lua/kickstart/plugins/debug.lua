@@ -23,6 +23,9 @@ return {
 
     -- Add your own debuggers here
     'leoluz/nvim-dap-go',
+    'mfussenegger/nvim-dap-python',
+    --  Shows variable values inline as virtual text
+    'theHamsta/nvim-dap-virtual-text',
   },
   keys = {
     -- Basic debugging keymaps, feel free to change to your liking!
@@ -118,6 +121,13 @@ return {
           disconnect = '⏏',
         },
       },
+      layouts = {
+        {
+          elements = { 'repl', 'console' },
+          size = 0.45, -- Takes up 25% of screen height
+          position = 'bottom', -- Position at the bottom
+        },
+      },
     }
 
     -- Change breakpoint icons
@@ -133,8 +143,8 @@ return {
     -- end
 
     dap.listeners.after.event_initialized['dapui_config'] = dapui.open
-    dap.listeners.before.event_terminated['dapui_config'] = dapui.close
-    dap.listeners.before.event_exited['dapui_config'] = dapui.close
+    -- dap.listeners.before.event_terminated['dapui_config'] = dapui.close
+    -- dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
     -- Install golang specific config
     require('dap-go').setup {
