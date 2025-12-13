@@ -124,7 +124,7 @@ return {
       layouts = {
         {
           elements = { 'repl', 'console' },
-          size = 0.45, -- Takes up 25% of screen height
+          size = 0.45, -- Takes up 45% of screen height
           position = 'bottom', -- Position at the bottom
         },
       },
