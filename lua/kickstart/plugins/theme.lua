@@ -21,8 +21,8 @@ return {
     priority = 1000,
     config = function()
       require('gruvbox').setup()
-      vim.o.background = 'dark'
-      vim.cmd.colorscheme 'gruvbox' -- Uncomment to set as default
+      -- vim.o.background = 'dark'
+      -- vim.cmd.colorscheme 'gruvbox' -- Uncomment to set as default
     end,
   },
   --GRUVBOX
@@ -34,8 +34,17 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      vim.g.flexoki_style = 'light'
+      --    vim.g.flexoki_style = 'light'
       --      vim.cmd.colorscheme 'flexoki-light' -- Uncomment to set as default
+    end,
+  },
+  {
+    'steve-lohmeyer/mars.nvim',
+    name = 'mars',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme 'mars'
     end,
   },
 }
