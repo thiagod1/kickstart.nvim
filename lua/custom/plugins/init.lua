@@ -14,4 +14,6 @@ return {
     },
     lazy = false, -- neo-tree will lazily load itself
   },
+  -- required for python env 22/12/25 to get the irproject going
+  'linux-cultist/venv-selector.nvim',
 }

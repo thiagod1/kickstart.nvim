@@ -10,7 +10,7 @@ return {
         flavour = 'latte', -- Options: latte, frappe, macchiato, mocha
         background = { light = 'latte', dark = 'mocha' },
       }
-      --vim.cmd.colorscheme 'catppuccin-latte'
+      vim.cmd.colorscheme 'catppuccin-mocha'
     end,
   },
   --GRUVBOX LIGHT
@@ -44,7 +44,16 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'mars'
+      --      vim.cmd.colorscheme 'mars'
+    end,
+  },
+  {
+    'shaunsingh/nord.nvim',
+    name = 'nord',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      --vim.cmd.colorscheme 'nord'
     end,
   },
 }
